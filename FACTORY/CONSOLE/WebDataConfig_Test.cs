@@ -1,6 +1,5 @@
-﻿using BlueRocket.CORE.Lib.Files;
-using BlueRocket.CORE.Lib.Vars;
-using BlueRocket.CORE.Tests.Factory.lib;
+﻿using BlueRocket.CORE.Tests.Factory.lib;
+using BlueRocket.LIBRARY;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;

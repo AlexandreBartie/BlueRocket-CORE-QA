@@ -1,14 +1,9 @@
-﻿using BlueRocket.CORE.Factory;
-using BlueRocket.CORE.Factory.Console;
-using BlueRocket.CORE.Factory.Data;
-using BlueRocket.CORE;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using BlueRocket.CORE.Lib.Vars;
-using BlueRocket.CORE.Lib.Generic;
-using BlueRocket.CORE.FACTORY.UNIT;
+using BlueRocket.CORE;
+using BlueRocket.LIBRARY;
 
 namespace BlueRocket.CORE.Tests.Factory.lib
 {
@@ -212,16 +207,16 @@ namespace BlueRocket.CORE.Tests.Factory.lib
 
             Console.SetAnchor(prmAncora: new DateTime(2021, 06, 05));
 
-            Connect.Oracle.user = "desenvolvedor_sia";
-            Connect.Oracle.password = prmSenha;
+            Connect.Assist.Oracle.user = "desenvolvedor_sia";
+            Connect.Assist.Oracle.password = prmSenha;
 
-            Connect.Oracle.host = "10.250.1.35";
-            Connect.Oracle.port = "1521";
-            Connect.Oracle.service = "INTEGRATION.prod01.redelocal.oraclevcn.com";
+            Connect.Assist.Oracle.host = "10.250.1.35";
+            Connect.Assist.Oracle.port = "1521";
+            Connect.Assist.Oracle.service = "INTEGRATION.prod01.redelocal.oraclevcn.com";
 
-            Connect.Oracle.Add(prmTag: "SIA");
+            Connect.AddDataBase(prmTag: "SIA", Connect.Assist.Oracle.GetString());
 
-            Connect.Pool.DoConnect();
+            Connect.DoConnect();
 
         }
 
@@ -236,7 +231,7 @@ namespace BlueRocket.CORE.Tests.Factory.lib
 
     }
 
-    public class UTC_BlueRocketCORE : UTC
+    public class UTC_BlueRocket : UTC
     {
 
         private TestDataProject Factory = new TestDataProject();

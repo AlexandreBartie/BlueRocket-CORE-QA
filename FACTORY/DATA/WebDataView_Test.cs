@@ -1,6 +1,4 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using BlueRocket.CORE.Factory.Data;
-using BlueRocket.CORE.Factory;
 using BlueRocket.CORE.Tests.Factory.lib;
 using System;
 using System.Collections.Generic;
